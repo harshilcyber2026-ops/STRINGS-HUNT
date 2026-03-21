@@ -172,20 +172,7 @@ code,.mono{font-family:var(--font-mono);background:rgba(0,232,200,0.06);border:1
 .terminal-body::-webkit-scrollbar-track{background:transparent}
 .terminal-body::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
 
-/* ── HINTS ── */
-.hints-list{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.5rem}
-.hint-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color var(--transition)}
-.hint-item.open{border-color:var(--accent3)}
-.hint-toggle{width:100%;background:transparent;border:none;cursor:pointer;padding:1rem 1.2rem;display:flex;align-items:center;gap:0.8rem;font-family:var(--font-mono);font-size:0.78rem;color:var(--text-dim);text-align:left;transition:background var(--transition),color var(--transition)}
-.hint-toggle:hover{background:var(--surface2);color:var(--accent3)}
-.hint-item.open .hint-toggle{background:rgba(245,166,35,0.05);color:var(--accent3)}
-.hint-num-badge{background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.3);color:var(--accent3);padding:2px 8px;font-size:0.62rem;letter-spacing:2px;border-radius:2px;flex-shrink:0}
-.hint-q{flex:1}
-.hint-chevron{color:var(--text-dim);font-size:0.65rem;transition:transform var(--transition);flex-shrink:0}
-.hint-item.open .hint-chevron{transform:rotate(180deg)}
-.hint-body{display:none;padding:1rem 1.2rem;font-family:var(--font-mono);font-size:0.78rem;color:var(--text);line-height:1.8;border-top:1px solid rgba(245,166,35,0.15);background:rgba(245,166,35,0.03)}
-.hint-item.open .hint-body{display:block;animation:hintSlide 0.2s ease}
-@keyframes hintSlide{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+
 
 /* ── SUBMIT PANEL ── */
 .submit-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;margin-bottom:1.5rem;position:relative;overflow:hidden}
