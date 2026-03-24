@@ -209,12 +209,6 @@ code,.mono{font-family:var(--font-mono);background:rgba(0,232,200,0.06);border:1
     FLAG<span style="color:var(--accent)">VAULT</span>
     <span class="bracket">]</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#" class="active">Challenges</a></li>
-    <li><a href="#">Scoreboard</a></li>
-    <li><a href="#">Rules</a></li>
-  </ul>
   <div class="nav-status">
     <div class="status-dot"></div>
     BINARY LOADED
@@ -233,23 +227,9 @@ code,.mono{font-family:var(--font-mono);background:rgba(0,232,200,0.06);border:1
     <p class="page-desc">A simple ELF binary. The flag might just be sitting in there as a string. No disassembly needed — maybe.</p>
   </header>
 
-  <!-- Stats -->
-  <div class="stats-strip">
-    <div class="stat-box"><span class="stat-val">100</span><span class="stat-label">Points</span></div>
-    <div class="stat-box"><span class="stat-val amber">EASY</span><span class="stat-label">Difficulty</span></div>
-    <div class="stat-box"><span class="stat-val">247</span><span class="stat-label">Solves</span></div>
-    <div class="stat-box"><span class="stat-val">REV</span><span class="stat-label">Category</span></div>
-  </div>
-
   <!-- Challenge Brief -->
   <div class="sec-divider"><h3>Challenge Brief</h3></div>
   <div class="info-panel">
-    <div class="info-grid">
-      <div class="info-block"><span class="info-label">⚙ Author</span><span class="info-val">harshilcyber2026</span></div>
-      <div class="info-block"><span class="info-label">📁 Category</span><span class="info-val">Reverse Engineering</span></div>
-      <div class="info-block"><span class="info-label">🏆 Points</span><span class="info-val">100 pts</span></div>
-      <div class="info-block"><span class="info-label">🖥 Architecture</span><span class="info-val">ELF x86-64</span></div>
-    </div>
     <div class="divider"></div>
     <p class="desc-text">
       We intercepted a suspicious Linux binary left on a compromised machine.
@@ -308,64 +288,13 @@ drwxr-xr-x 8 analyst analyst 4096 Jan 15 09:11 ..
     </div>
   </div>
 
-  <!-- Hints -->
-  <div class="sec-divider"><h3>Hints</h3></div>
-  <div class="hints-list">
-    <div class="hint-item" id="hint1">
-      <button class="hint-toggle" onclick="toggleHint('hint1')">
-        <span class="hint-num-badge">HINT 1</span>
-        <span class="hint-q">What tool extracts printable strings from a binary?</span>
-        <span class="hint-chevron">▼</span>
-      </button>
-      <div class="hint-body">
-        On Linux, use the <code>strings</code> command: <code>strings strings_hunt</code><br>
-        On Windows, use Sysinternals <code>strings.exe</code> or open in a hex editor.
-      </div>
-    </div>
-    <div class="hint-item" id="hint2">
-      <button class="hint-toggle" onclick="toggleHint('hint2')">
-        <span class="hint-num-badge">HINT 2</span>
-        <span class="hint-q">I see something that looks like a flag but it says "fake". What now?</span>
-        <span class="hint-chevron">▼</span>
-      </button>
-      <div class="hint-body">
-        Red herrings are common in CTFs! Read <em>all</em> the output carefully — the real flag is the <strong>last</strong> one.<br>
-        Try: <code>strings strings_hunt | grep FlagVault</code>
-      </div>
-    </div>
-    <div class="hint-item" id="hint3">
-      <button class="hint-toggle" onclick="toggleHint('hint3')">
-        <span class="hint-num-badge">HINT 3</span>
-        <span class="hint-q">I don't have Linux. How do I run strings?</span>
-        <span class="hint-chevron">▼</span>
-      </button>
-      <div class="hint-body">
-        Use the <strong>Browser Terminal</strong> above — it simulates the exact <code>strings</code> output for this binary. No Linux needed!
-      </div>
-    </div>
-  </div>
-
-  <!-- Flag Submit -->
-  <div class="sec-divider"><h3>Submit Flag</h3></div>
-  <div class="submit-panel">
-    <div class="form-group">
-      <label class="form-label">Enter Flag</label>
-      <div class="flag-input-wrap">
-        <span class="flag-pfx">FlagVault{</span>
-        <input type="text" class="form-control" id="flag-input" placeholder="your_flag_here"/>
-      </div>
-    </div>
-    <button class="btn btn-primary" onclick="submitFlag()">⚑ &nbsp;SUBMIT FLAG</button>
-    <div class="submit-result" id="submit-result"></div>
-  </div>
-
+ 
   <!-- Tags -->
   <div class="tag-row">
     <span class="tag tag-green">Strings</span>
     <span class="tag tag-amber">ELF Binary</span>
     <span class="tag tag-green">Linux</span>
     <span class="tag tag-purple">Rev Engineering</span>
-    <span class="tag tag-amber">100 pts</span>
     <span class="tag tag-green">Beginner</span>
   </div>
 
